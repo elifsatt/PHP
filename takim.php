@@ -83,10 +83,10 @@
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>Boy/Kilo Endeksi</h2>
+						<h2>Takım</h2>
 						<div class="page_link">
 							<a href="#">Ana Menü</a>
-							<a href="#">Boy/Kilo Endeksi</a>
+							<a href="#">Takım</a>
 						</div>
 					</div>
 				</div>
