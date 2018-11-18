@@ -107,7 +107,7 @@
                     
                         if($top>500)
                     {
-                        echo "n=$i sayi toplami=$top";
+                        echo "1 ile $i (n=$i) arasındaki sayıların toplamı=$top";
                         break; 
                     }
 
