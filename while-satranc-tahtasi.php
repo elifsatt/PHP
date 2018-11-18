@@ -60,7 +60,6 @@
 									<li class="nav-item"><a class="nav-link" href="not-cevirme.php">Nota Çevirme</a></li>
 									<li class="nav-item"><a class="nav-link" href="n-sayisi.php">N Sayisi</a></li>
                                     <li class="nav-item"><a class="nav-link" href="while-satranc-tahtasi.php">While ile Satranç Tahtası</a></li>
-
 									
                                 </ul>
 							</li> 
@@ -84,10 +83,10 @@
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h2>ARM</h2>
+						<h2>While ile Satranç Tahtası</h2>
 						<div class="page_link">
 							<a href="#">Ana Menü</a>
-							<a href="#">ARM</a>
+							<a href="#">While ile Satranç Tahtası</a>
 						</div>
 					</div>
 				</div>
@@ -96,34 +95,31 @@
         <!--================End Home Banner Area =================-->
         
         <!--================Find View Area =================-->
-        <section class="find_view_area p_120"> 
+        <section class="find_view_area p_120"  style="background-color: grey;"> 
         	<div class="container">
         		<div class="find_inner" >
                  
-                    <form >
-                        <div class="form-group">
-                        <h2 class="title" style="text-align: center;"></h2>
-                        </div>
-                        <div class="form-group" style="    font-family: cursive;   font-size: 22px;">
-                            
-                        <?php
-                                for($i=1;$i<1000;$i++)   
-                            {
-                                $a=(int)($i/100); 
-                                $b=(int) (($i%100)/10);
-                                $c=(int)($i%10);
-                            
-                            if(($a*$a*$a+$b*$b*$b+$c*$c*$c)==$i)
-                                    echo $i."<br>";
-                            }
+                <?php
+                    $a=1;
 
-                            
-                            ?>
-                        </div>
+                    echo "<center> <table class='satrancTahtasi' border='2' width='570' height='570'>";
                         
-                    </form>
+                            echo  "<tr> <td class='tahtaKose'> </td> <td class='tahtaKose' height='10' > A</td>  <td class='tahtaKose' height='10'>B</td>  <td class='tahtaKose' height='10'>C</td> <td class='tahtaKose' height='10'>D</td> <td class='tahtaKose' height='10'>E</td> <td class='tahtaKose' height='10'>F</td> <td class='tahtaKose' height='10'>G</td> <td class='tahtaKose' height='10'>H</td> </tr>";
+                        
+                        
+                        while($a<=8)
+                        {
+                                echo "<tr> 
+                                <td class='tahtaKose' width='10' >$a</td>  <td   bgcolor='white' width='60' height='60'> </td>  <td   bgcolor='black' width='60' height='60'> </td> <td   bgcolor='white' width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td> <td   bgcolor='white' width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td> <td  bgcolor='white'  width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td></tr>";
+                                $a++;
+                             echo" <tr><td  class='tahtaKose' height='10'>$a</td>  <td   bgcolor='black' width='60' height='60'> </td> <td   bgcolor='white' width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td> <td   bgcolor='white' width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td> <td  bgcolor='white'  width='60' height='60'> </td> <td bgcolor='black' width='60' height='60'> </td><td bgcolor='white' width='60' height='60'> </td>
 
-                 
+                                 </tr> " ;          
+                                        $a++;
+                            }
+                    echo "</table> </center>";
+                    ?>
+              
                     
         		</div>
         	</div>
