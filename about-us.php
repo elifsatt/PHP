@@ -104,11 +104,13 @@
 					   
 					   <tr> <th style="text-align:left;" width="300" height="30">Soyadı:</th> <td width="600" height="30" style="text-align:left;">&nbsp;Şat </td> </tr>
 					   
-					   <tr> <th style="text-align:left;" width="300" height="30">Telefon:</th> <td width="600" height="30" style="text-align:left;">&nbsp;05061203926 </td> </tr>
+					   <tr> <th style="text-align:left;" width="300" height="30">Telefon:</th> <td width="600" height="30" style="text-align:left;">&nbsp;05060000000 </td> </tr>
 					   
 					   <tr> <th style="text-align:left;" width="300" height="30">E-mail:</th> <td width="600" height="30" style="text-align:left;">&nbsp;elifsat17@hotmail.com</td> </tr>
 					   
-					   <tr> <th style="text-align:left;" width="300" height="30">Adres</th> <td width="600" height="30" style="text-align:left;">&nbsp;İsmetİnönü&nbsp;Cad&nbsp;barbaros&nbsp;Mah&nbsp;YasminApt&nbsp; No:39&nbsp;Daire&nbsp;10</td > </tr>
+					   <tr> <th style="text-align:left;" width="300" height="30">Github:</th> <td width="600" height="30" style="text-align:left;">&nbsp;https://github.com/elifsatt</td> </tr>
+					   
+					   <tr> <th style="text-align:left;" width="300" height="30">Adres</th> <td width="600" height="30" style="text-align:left;">&nbsp;İskenderun</td > </tr>
 					   
 					   <tr> <th style="text-align:left;" width="300" height="30">Hobiler:</th> <td width="1100" height="30" colspan="2" style="text-align:left;">&nbsp;Uyumak,&nbsp; Yürümek,&nbsp;Sohbet,&nbsp;Programlama </td > </tr>
 					   
