@@ -99,12 +99,19 @@
         	<div class="container">
         		<div class="find_inner" >
                  
-                <form  method="POST" action="not-cevirme.php">
-                    Notunuz: <input type= "text" name= "s" >
-                    <br><br>
-                    <input type="submit"  value="Hesapla">
-                    <br><br>
-                </form>
+               
+
+                <form method="POST" action="not-cevirme.php">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Notunuz</label>
+                        
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="s" aria-describedby="emailHelp">
+                    </div>               
+                   
+                    <button type="submit" class="btn btn-primary"  name="hesapla">Hesapla</button>
+                 </form>
+
+
                 <?php
                     function bescevir($a)
                     {
