@@ -99,28 +99,26 @@
         	<div class="container">
         		<div class="find_inner" >
                  
-               <!-- <form method="POST" action="islem.php">
+                <form method="POST" action="islem.php">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Boyunuz</label>
+                        <label for="exampleInputEmail1">a</label>
                         
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="b" >
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="a" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Kilonuz</label>
+                        <label for="exampleInputEmail1">b</label>
                         
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="k" >
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="b" aria-describedby="emailHelp">
                     </div>
+                    <div class="form-group">
+                            <label for="exampleInputEmail1">İşlem : </label>
+                             <input type="radio" name="islem" value="1">+ <input type="radio" name="islem" value="2">-
+                             <input type="radio" name="islem" value="3">x <input type="radio" name="islem" value="4">/
+                    </div>
+                    
                    
                     <button type="submit" class="btn btn-primary"  name="hesapla">Hesapla</button>
-                 </form>-->
-
-                 <form method="POST" action="islem.php">
-    <input type="radio" name="islem" value="1">+ <input type="radio" name="islem" value="2">-&nbsp;&nbsp;<input type="text" name="a" value="">  <br>
-   
-      <input type="radio" name="islem" value="3">x <input type="radio" name="islem" value="4">/&nbsp;&nbsp;&nbsp;<input type="text" name="b" value="">  <br><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" name="submit" value="hesapla">
-    </form> 
+                 </form>
 
 
                  
@@ -132,16 +130,31 @@
                         if(isset($_POST['a']) && isset($_POST['b'])){
                             $a=$_POST['a'];
                             $b=$_POST['b'];
+
+                            if(is_numeric($a) && is_numeric($b)){
+                                
+                                if(isset($_POST['islem'])){
+                                    $d= $_POST['islem'];
+
+                                    if($d==1){
+                                        printf("%d+%d=%d",$a,$b,($a+$b));
+                                    } else if($d==2){
+                                        printf("%d-%d=%d",$a,$b,($a-$b));
+                                    } else if($d==3) {
+                                        printf("%dx%d=%d",$a,$b,($a*$b));
+                                    } else if($d==4) {
+                                        printf("%d/%d=%f",$a,$b,($a/$b));
+                                    } else {
+                                        printf("İşlem seçiniz");
+                                    }
+                                } else{
+                                    printf("İşlem seçiniz");
+                                }
+                                
+                                    
+                            }
         
-                            $d= $_POST['islem'];
-                                if($d==1)
-                                printf("%d+%d=%d",$a,$b,($a+$b));
-                                if($d==2)
-                                printf("%d-%d=%d",$a,$b,($a-$b));
-                                if($d==3)
-                                printf("%dx%d=%d",$a,$b,($a*$b));
-                                if($d==4)
-                                printf("%d/%d=%f",$a,$b,($a/$b));
+                            
                         }
                         
                     ?>
