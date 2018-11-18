@@ -100,18 +100,30 @@
         		<div class="find_inner" >
                  
                 Program ax^2+bx+c şeklindeki denklemin köklerini hesaplar....
-                <form  method="POST" action= "kok-hesapla.php"  > 
-                    a:<input type="text" name="a" value=""> <br>
+               
 
-                    b:<input type="text" name="b" value=""><br>
-
-                    c:<input type="text" name="c" value=""><br>
-                    <br>
+                <form method="POST" action="kok-hesapla.php">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">a</label>
+                        
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="a" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">b</label>
+                        
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="b" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">c</label>
+                        
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="c" aria-describedby="emailHelp">
+                    </div>
                     
+                   
+                    <button type="submit" class="btn btn-primary"  name="hesapla">Hesapla</button>
+                 </form>
 
-                     <input type="submit" value="Hesapla">
 
-                </form> 
                     <?php
 
                         if(isset($_POST['a']) && isset($_POST['b']) && isset($_POST['c'])){
@@ -119,32 +131,37 @@
                             $b= $_POST['b'];
                             $c= $_POST['c'];
     
-    
+                            if(is_numeric($b) && is_numeric($a) && is_numeric($c)){
                                 $d=($b*$b)-(4*$a*$c);        
                             
                                 
-                            if($d>0)  
-                            {      
-    
-                                $y=sqrt($d);                          
-                                $x1=((-$b)+($y))/(2*$a);               
-                                $x2=((-$b)-($y))/(2*$a);               
+                                if($d>0)  
+                                {      
+        
+                                    $y=sqrt($d);                          
+                                    $x1=((-$b)+($y))/(2*$a);               
+                                    $x2=((-$b)-($y))/(2*$a);               
+                                    
+                                    echo "2 adet kök vardır. <br> Kök1 = $x1 <br> Kök2 =$x2";
+                                } 
                                 
-                                echo "2 adet kök vardır. <br> Kök1 = $x1 <br> Kök2 =$x2";
-                            } 
-                            
-                            
+                                
+        
+        
+                                else if($d==0)  
+                                {
+                                $x1= (-$b)/(2*$a);
+                                echo "iki kök var, kökler birbirine eşit. <br> kök1=$x1 <br> kök2=$x1";
+                                
+                                }    
+        
+                                else 
+                                echo "Reel kök yoktur";
+                            } else {
+                                echo "Sayı giriniz";
+                            }
     
-    
-                            else if($d==0)  
-                            {
-                            $x1= (-$b)/(2*$a);
-                            echo "iki kök var, kökler birbirine eşit. <br> kök1=$x1 <br> kök2=$x1";
-                            
-                            }    
-    
-                            else 
-                            echo "Reel kök yoktur";
+                           
                         }
                         
 
